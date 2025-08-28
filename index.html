@@ -4,23 +4,55 @@
   <meta charset="UTF-8" />
   <title>jouer avec douda😍</title>
   <style>
-    body {
-      background-color: #FFFACD;
-      font-family: sans-serif;
-      text-align: center;
-      padding-top: 50px;
+  body {
+    background-color: #FFFACD;
+    font-family: sans-serif;
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  input, button {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+  }
+
+  #feedback {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+  }
+
+  #winMessage {
+    font-size: 24px;
+    color: #e91e63;
+    margin-top: 30px;
+    animation: fadeInScale 1s ease-out forwards;
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  @keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
     }
-    input, button {
-      padding: 10px;
-      margin: 10px;
-      font-size: 16px;
+    100% {
+      opacity: 1;
+      transform: scale(1);
     }
-    #feedback {
-      margin-top: 20px;
-      font-size: 18px;
-      color: #333;
-    }
-  </style>
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+</style>
+
+    
 </head>
 <body>
 
