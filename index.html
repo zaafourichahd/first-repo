@@ -1,33 +1,22 @@
 <!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Jeu de Deviner le Nombre</title>
-    <script src="script.js" defer></script>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        margin-top: 60px;
-      }
-      input,
-      button {
-        padding: 10px;
-        font-size: 16px;
-        margin: 10px;
-      }
-      #result {
-        font-weight: bold;
-        margin-top: 20px;
-        font-size: 18px;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>🎲 Devine le Nombre 🎲</h1>
-    <p>J'ai choisi un nombre entre 1 et 10. Essaie de le deviner !</p>
-    <input type="number" id="guess" min="1" max="10" />
-    <button onclick="verifierNombre()">Vérifier</button>
-    <p id="result"></p>
-  </body>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>لعبة تخمين الرقم</title>
+</head>
+<body>
+  <h1>لعبة تخمين الرقم</h1>
+
+  <button onclick="jouer()">ابدأ اللعبة</button>
+
+  <p>Score: <span id="score">0</span></p>
+
+  <input type="number" id="guessInput" placeholder="ادخل رقمك" />
+  <button onclick="checkGuess()">تحقق</button>
+
+  <p id="feedback"></p>
+
+  <script src="script.js"></script>
+</body>
 </html>
+
