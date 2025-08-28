@@ -18,10 +18,13 @@ function checkGuess() {
     score += 10;
     document.getElementById('score').textContent = score;
     secretNumber = 21; // رقم جديد للعب مرة أخرى
+    winSound.play()
   } else if (guess > secretNumber) {
     feedback.textContent = "nakes chwaya aayech habibi";
   } else {
     feedback.textContent = "zyd chwaya aayech habibi";
+  const winSound = new Audio('sounds/win.mp3');
+
   }
 }
 
