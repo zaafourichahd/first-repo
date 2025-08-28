@@ -1,22 +1,28 @@
-// Choisir un nombre aléatoire entre 1 et 10
-let nombreSecret = Math.floor(Math.random() * 10) + 1;
+// Choisir un nombre aléatoire entre 1 et 100
 
-function verifierNombre() {
-  const guess = document.getElementById("guess").value;
-  const result = document.getElementById("result");
+let secretNumber = Math.floor(Math.random() * 100) + 1;
+let score = 0;
+function jouer() {
+  alert("العب تبدأ! حاول تخمن رقم من 1 إلى 100.");
+}
 
-  if (!guess) {
-    result.textContent = "⛔️ Entrer un nombre, stp.";
+function checkGuess() {
+  const guess = Number(document.getElementById('guessInput').value);
+  const feedback = document.getElementById('feedback');
+  if (!guess || guess < 1 || guess > 100) {
+    feedback.textContent = "ادخل رقم بين 1 و 100!";
     return;
   }
-
-  const guessNumber = parseInt(guess);
-
-  if (guessNumber === nombreSecret) {
-    result.textContent = "🎉 Bravo ! Tu as deviné le bon nombre !";
-  } else if (guessNumber < nombreSecret) {
-    result.textContent = "📉 Trop petit ! Essaie encore.";
+  if (guess === secretNumber) {
+    feedback.textContent = "مبروك! ربحته!";
+    score += 10;
+    document.getElementById('score').textContent = score;
+    secretNumber = Math.floor(Math.random() * 100) + 1; // رقم جديد للعب مرة أخرى
+  } else if (guess > secretNumber) {
+    feedback.textContent = "نقص شويّ!";
   } else {
-    result.textContent = "📈 Trop grand ! Essaie encore.";
+    feedback.textContent = "زيد شويّ!";
   }
 }
+
+  
