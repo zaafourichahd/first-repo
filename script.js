@@ -14,7 +14,7 @@ function checkGuess() {
     return;
   }
   if (guess === secretNumber) {
-    feedback.textContent = "opopop zeyed maak mon héros";
+    feedback.textContent = "opopop zeyed maak mon héros😘 ";
     score += 10;
     document.getElementById('score').textContent = score;
     secretNumber = 21; // رقم جديد للعب مرة أخرى
