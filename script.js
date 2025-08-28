@@ -3,7 +3,7 @@
 let secretNumber = 21;
 let score = 0;
 function jouer() {
-  alert("hetli trah r9am bin 1 et 100 ");
+  alert("hetli trah r9am entre 1 et 100 ");
 }
 
 function checkGuess() {
