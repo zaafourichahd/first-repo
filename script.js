@@ -21,10 +21,10 @@ function checkGuess() {
   } else if (guess > secretNumber) {
     feedback.textContent = "nakes chwaya aayech habibi";
   } else {
-    feedback.textContent = "zyd chwaya aayech habibi";
-  const winSound = new Audio('sounds/win.mp3');
-
+    feedback.textContent = "zyd chwaya aayech habibi"
   }
+  
+  document.getElementById('guessInput').value = '';
 }
 
   
